@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Modules.Keypad">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restart Module"
+        android:onClick="restartClick"
+        android:id="@+id/buttonrestart"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Different Module"
+        android:onClick="differentClick"
+        android:id="@+id/buttondifferent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Click the buttons you see:"
+        android:id="@+id/keypadprompt"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"/>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/solution"
+        android:layout_gravity="center_horizontal"></LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonrestart"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/keypadprompt">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/center_point"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/center_point">
+
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadAT"
+                    android:onClick="keypadAT"
+                    android:background="@drawable/at" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadH"
+                    android:onClick="keypadH"
+                    android:background="@drawable/h" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadKK"
+                    android:onClick="keypadKK"
+                    android:background="@drawable/kk" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadN"
+                    android:onClick="keypadN"
+                    android:background="@drawable/n" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadTb"
+                    android:onClick="keypadTb"
+                    android:background="@drawable/tb" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadae"
+                    android:onClick="keypadae"
+                    android:background="@drawable/ae" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadBackwardC"
+                    android:onClick="keypadBackC"
+                    android:background="@drawable/backwardc" />
+
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadBolt"
+                    android:onClick="keypadBolt"
+                    android:background="@drawable/bolt" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadCane"
+                    android:onClick="keypadCane"
+                    android:background="@drawable/cane" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadBackE"
+                    android:onClick="keypadBackE"
+                    android:background="@drawable/backwarde" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadController"
+                    android:onClick="keypadController"
+                    android:background="@drawable/controller" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadCopyright"
+                    android:onClick="keypadCopyright"
+                    android:background="@drawable/copyright" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadCWithDot"
+                    android:onClick="keypadCWithDot"
+                    android:background="@drawable/cwithdot" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadEmptyStar"
+                    android:onClick="keypadEmptyStar"
+                    android:background="@drawable/emptystar" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignLeft="@+id/center_point"
+                android:layout_alignParentRight="true">
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadFace"
+                    android:onClick="keypadFace"
+                    android:background="@drawable/face" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadFilledStar"
+                    android:onClick="keypadFilledStar"
+                    android:background="@drawable/filledstar" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadHashtag"
+                    android:onClick="keypadHashtag"
+                    android:background="@drawable/hashtag" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadLambda"
+                    android:onClick="keypadLambda"
+                    android:background="@drawable/lambda" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadMirror"
+                    android:onClick="keypadMirror"
+                    android:background="@drawable/mirror" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadOmega"
+                    android:onClick="keypadOmega"
+                    android:background="@drawable/omega" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadParagraph"
+                    android:onClick="keypadParagraph"
+                    android:background="@drawable/paragraph" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadQuestion"
+                    android:onClick="keypadQuestion"
+                    android:background="@drawable/questmark" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadSix"
+                    android:onClick="keypadSix"
+                    android:background="@drawable/six" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadSquid"
+                    android:onClick="keypadSquid"
+                    android:background="@drawable/squid" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadThree"
+                    android:onClick="keypadThree"
+                    android:background="@drawable/three" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadTrident"
+                    android:onClick="keypadTrident"
+                    android:background="@drawable/trident" />
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/keypadWalt"
+                    android:onClick="keypadWalt"
+                    android:background="@drawable/walt" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

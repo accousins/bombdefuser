@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="simple_wires">
+        <item>No Wire</item>
+        <item>Blue</item>
+        <item>Black</item>
+        <item>White</item>
+        <item>Red</item>
+        <item>Yellow</item>
+    </string-array>
+    <string-array name="button_colors">
+        <item>Select</item>
+        <item>Red</item>
+        <item>Blue</item>
+        <item>White</item>
+        <item>Yellow</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="button_labels">
+        <item>Abort</item>
+        <item>Press</item>
+        <item>Hold</item>
+        <item>Detonate</item>
+        <item>Other</item>
+    </string-array>
+</resources>

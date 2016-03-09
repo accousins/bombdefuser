@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="finalproject.bombdefuser">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ModuleSelection" />
+        <activity android:name=".Modules.SimpleWires" />
+        <activity android:name=".Modules.ButtonMod" />
+        <activity android:name=".Modules.Memory" />
+        <activity android:name=".Modules.Keypad" />
+        <activity android:name=".Modules.SimonSays" />
+        <activity
+            android:name=".Modules.WhosOnFirst"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".Modules.MorseCode"></activity>
+        <activity android:name=".Modules.CompWires" />
+        <activity android:name=".Modules.WireSeq" />
+        <activity android:name=".Modules.Mazes" />
+        <activity android:name=".Modules.Passwords" />
+        <activity android:name=".Modules.Needy.NeedyMain" />
+        <activity android:name=".Modules.Needy.Knob" />
+        <activity android:name=".Modules.Needy.Venting" />
+        <activity android:name=".Modules.Needy.Cap"></activity>
+    </application>
+
+</manifest>

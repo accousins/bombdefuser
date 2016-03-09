@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="whosonfirstsuggestions">
+        <item>ready</item>
+        <item>first</item>
+        <item>no</item>
+        <item>blank</item>
+        <item>nothing</item>
+        <item>yes</item>
+        <item>what</item>
+        <item>uhhh</item>
+        <item>left</item>
+        <item>right</item>
+        <item>middle</item>
+        <item>okay</item>
+        <item>wait</item>
+        <item>press</item>
+        <item>you</item>
+        <item>you are</item>
+        <item>you\'re</item>
+        <item>ur</item>
+        <item>u</item>
+        <item>uh huh</item>
+        <item>uh uh</item>
+        <item>what?</item>
+        <item>done</item>
+        <item>next</item>
+        <item>hold</item>
+        <item>sure</item>
+        <item>like</item>
+    </string-array>
+</resources>

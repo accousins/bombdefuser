@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Modules.CompWires">
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Modules.CompWires">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bomb Specific:"
+        android:id="@+id/modSpecific"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parallel Port?"
+        android:id="@+id/hasParallel"
+        android:layout_below="@+id/modSpecific"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:nestedScrollingEnabled="false"
+        android:onClick="updateCut" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 or more batteries?"
+                android:id="@+id/numBats"
+                android:layout_below="@+id/hasParallel"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:onClick="updateCut" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Is last digit of serial even?"
+                android:id="@+id/serialDigit"
+                android:layout_below="@+id/numBats"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Wire:"
+        android:id="@+id/wire1"
+                android:textIsSelectable="false"
+        android:textSize="20dp"
+                android:layout_below="@+id/serialDigit"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Has Red?"
+        android:id="@+id/hasRed_1"
+        android:layout_below="@+id/wire1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="updateCut" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Has Blue?"
+        android:id="@+id/hasBlue_1"
+        android:layout_below="@+id/hasRed_1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="updateCut" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Has Star?"
+        android:id="@+id/hasStar_1"
+        android:layout_below="@+id/hasBlue_1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="updateCut" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LED On?"
+        android:id="@+id/hasLED_1"
+        android:layout_below="@+id/hasStar_1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="updateCut" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Second Wire:"
+        android:id="@+id/wire2"
+        android:textIsSelectable="false"
+        android:textSize="20dp"
+        android:layout_below="@+id/hasLED_1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Has Red?"
+        android:id="@+id/hasRed_2"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/wire2"
+        android:layout_alignParentLeft="true"
+        android:onClick="updateCut" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Has Blue?"
+        android:id="@+id/hasBlue_2"
+        android:layout_below="@+id/hasRed_2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="updateCut" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Has Star?"
+        android:id="@+id/hasStar_2"
+        android:layout_below="@+id/hasBlue_2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="updateCut" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LED On?"
+        android:id="@+id/hasLED_2"
+        android:layout_below="@+id/hasStar_2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="updateCut" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Third Wire:"
+        android:id="@+id/wire3"
+        android:textIsSelectable="false"
+        android:textSize="20dp"
+        android:layout_below="@+id/hasLED_2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Has Red?"
+        android:id="@+id/hasRed_3"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/wire3"
+        android:layout_alignParentLeft="true"
+        android:onClick="updateCut" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Has Blue?"
+        android:id="@+id/hasBlue_3"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/hasRed_3"
+        android:layout_alignParentLeft="true"
+        android:onClick="updateCut" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Has Star?"
+        android:id="@+id/hasStar_3"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/hasBlue_3"
+        android:layout_alignParentLeft="true"
+        android:onClick="updateCut" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LED On?"
+        android:id="@+id/hasLED_3"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/hasStar_3"
+        android:layout_alignParentLeft="true"
+        android:onClick="updateCut" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fourth Wire:"
+                android:id="@+id/wire4"
+                android:textIsSelectable="false"
+                android:textSize="20dp"
+                android:layout_below="@+id/hasLED_3"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Has Red?"
+                android:id="@+id/hasRed_4"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/wire4"
+                android:layout_alignParentLeft="true"
+                android:onClick="updateCut" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Has Blue?"
+                android:id="@+id/hasBlue_4"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/hasRed_4"
+                android:layout_alignParentLeft="true"
+                android:onClick="updateCut" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Has Star?"
+                android:id="@+id/hasStar_4"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/hasBlue_4"
+                android:layout_alignParentLeft="true"
+                android:onClick="updateCut" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LED On?"
+                android:id="@+id/hasLED_4"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/hasStar_4"
+                android:layout_alignParentLeft="true"
+                android:onClick="updateCut" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fifth Wire:"
+                android:id="@+id/wire5"
+                android:textIsSelectable="false"
+                android:textSize="20dp"
+                android:layout_below="@+id/hasLED_4"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Has Red?"
+                android:id="@+id/hasRed_5"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/wire5"
+                android:layout_alignParentLeft="true"
+                android:onClick="updateCut" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Has Blue?"
+                android:id="@+id/hasBlue_5"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/hasRed_5"
+                android:layout_alignParentLeft="true"
+                android:onClick="updateCut" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Has Star?"
+                android:id="@+id/hasStar_5"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/hasBlue_5"
+                android:layout_alignParentLeft="true"
+                android:onClick="updateCut" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LED On?"
+                android:id="@+id/hasLED_5"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/hasStar_5"
+                android:layout_alignParentLeft="true"
+                android:onClick="updateCut" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sixth Wire:"
+                android:id="@+id/wire6"
+                android:textIsSelectable="false"
+                android:textSize="20dp"
+                android:layout_below="@+id/hasLED_5"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Has Red?"
+                android:id="@+id/hasRed_6"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/wire6"
+                android:layout_alignParentLeft="true"
+                android:onClick="updateCut" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Has Blue?"
+                android:id="@+id/hasBlue_6"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/hasRed_6"
+                android:layout_alignParentLeft="true"
+                android:onClick="updateCut" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Has Star?"
+                android:id="@+id/hasStar_6"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/hasBlue_6"
+                android:layout_alignParentLeft="true"
+                android:onClick="updateCut" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LED On?"
+                android:id="@+id/hasLED_6"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/hasStar_6"
+                android:layout_alignParentLeft="true"
+                android:onClick="updateCut" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cut:"
+                android:id="@+id/cutText"
+                android:textSize="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/compWires_toCut"
+                android:id="@+id/toCut"
+                android:layout_below="@+id/cutText"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="restart module"
+        android:id="@+id/restartButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="restartClick" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="different module"
+        android:id="@+id/differentButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="differentClick" />
+
+</RelativeLayout>
+
