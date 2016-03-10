@@ -33,7 +33,8 @@
         <activity android:name=".Modules.Needy.Knob" />
         <activity android:name=".Modules.Needy.Venting" />
         <activity android:name=".Modules.Needy.Cap" />
-        <activity android:name=".Modules.Complicated"></activity>
+        <activity android:name=".Modules.Complicated" />
+        <activity android:name=".Modules.Sequence"></activity>
     </application>
 
 </manifest>

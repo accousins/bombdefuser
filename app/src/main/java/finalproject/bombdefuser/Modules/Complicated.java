@@ -72,70 +72,89 @@ public class Complicated extends AppCompatActivity {
 
     }
 
-    public void restartClick(View v){
+    public void restartClick(View v) {
         Intent intent = getIntent();
         finish();
         startActivity(intent);
     }
 
-    public void differentClick(View v){
+    public void differentClick(View v) {
         finish();
     }
 
-    public void checkWire(View v){
+    public void checkWire(View v) {
+        String description = "";
         String check = "";
-        if(red){check+="1";}
-        else{check+="0";}
-        if(blue){check+="1";}
-        else{check+="0";}
-        if(star){check+="1";}
-        else{check+="0";}
-        if(led){check+="1";}
-        else{check+="0";}
+        if (red) {
+            check += "1";
+            description += "red";
+        } else {
+            check += "0";
+        }
+        if (blue) {
+            check += "1";
+            if(!description.equals("")){ description += "/";}
+            description += "blue";
+        } else {
+            check += "0";
+        }
+        if (star) {
+            check += "1";
+            if(!description.equals("")){ description += "/";}
+            description += "star";
+        } else {
+            check += "0";
+        }
+        if (led) {
+            check += "1";
+            if(!description.equals("")){ description += "/";}
+            description += "LED";
+        } else {
+            check += "0";
+        }
 
         String code = codes.get(check);
 
         int c;
-        switch(code){
+        switch (code) {
             case "C":
-                instruct.setText("CUT the wire");
+                instruct.setText("CUT the " + description + " wire");
                 break;
             case "D":
-                instruct.setText("DO NOT cut the wire");
+                instruct.setText("DO NOT cut the " + description + " wire");
                 break;
             case "S":
                 c = checkSerial();
-                if(c == 0){
-                    instruct.setText("CUT the wire");
+                if (c == 0) {
+                    instruct.setText("CUT the " + description + " wire");
                 }
-                if(c == 1){
-                    instruct.setText("DO NOT cut the wire");
+                if (c == 1) {
+                    instruct.setText("DO NOT cut the " + description + " wire");
                 }
                 break;
             case "P":
                 c = checkPort();
-                if(c == 1){
-                    instruct.setText("CUT the wire");
+                if (c == 1) {
+                    instruct.setText("CUT the " + description + " wire");
                 }
-                if(c == 0){
-                    instruct.setText("DO NOT cut the wire");
+                if (c == 0) {
+                    instruct.setText("DO NOT cut the " + description + " wire");
                 }
                 break;
             case "B":
                 c = checkBatt();
-                if(c >= 2){
-                    instruct.setText("CUT the wire");
-                }
-                else if(c >= 0){
-                    instruct.setText("DO NOT cut the wire");
+                if (c >= 2) {
+                    instruct.setText("CUT the " + description + " wire");
+                } else if (c >= 0) {
+                    instruct.setText("DO NOT cut the " + description + " wire");
                 }
                 break;
         }
 
     }
 
-    private int checkSerial(){
-        if(ModuleSelection.serial_number_odd >= 0){
+    private int checkSerial() {
+        if (ModuleSelection.serial_number_odd >= 0) {
             return ModuleSelection.serial_number_odd;
         }
         instruct.setText("Waiting for information");
@@ -146,8 +165,8 @@ public class Complicated extends AppCompatActivity {
         return -1;
     }
 
-    private int checkPort(){
-        if(ModuleSelection.parallel_port >= 0){
+    private int checkPort() {
+        if (ModuleSelection.parallel_port >= 0) {
             return ModuleSelection.parallel_port;
         }
         instruct.setText("Waiting for information");
@@ -158,8 +177,8 @@ public class Complicated extends AppCompatActivity {
         return -1;
     }
 
-    private int checkBatt(){
-        if(ModuleSelection.num_batteries >= 0){
+    private int checkBatt() {
+        if (ModuleSelection.num_batteries >= 0) {
             return ModuleSelection.num_batteries;
         }
         instruct.setText("Waiting for information");
@@ -174,35 +193,33 @@ public class Complicated extends AppCompatActivity {
         return -1;
     }
 
-    public void buttonClick(View v){
+    public void buttonClick(View v) {
         extraQuestion.setVisibility(View.INVISIBLE);
-        if(batt1.getVisibility() == View.VISIBLE){
+        if (batt1.getVisibility() == View.VISIBLE) {
             batt1.setVisibility(View.INVISIBLE);
             batt3.setVisibility(View.INVISIBLE);
             yes.setText("Yes");
             no.setText("No");
         }
-        switch(extra){
+        switch (extra) {
             case "serial":
-                if(v.getId() == R.id.complicatedYes){
+                if (v.getId() == R.id.complicatedYes) {
                     ModuleSelection.serial_number_odd = 1;
-                }
-                else{
+                } else {
                     ModuleSelection.serial_number_odd = 0;
                 }
                 checkWire(v);
                 break;
             case "port":
-                if(v.getId() == R.id.complicatedYes){
+                if (v.getId() == R.id.complicatedYes) {
                     ModuleSelection.parallel_port = 1;
-                }
-                else{
+                } else {
                     ModuleSelection.parallel_port = 0;
                 }
                 checkWire(v);
                 break;
             case "batt":
-                switch(v.getId()){
+                switch (v.getId()) {
                     case R.id.complicatedYes:
                         ModuleSelection.num_batteries = 0;
                         break;
@@ -222,11 +239,11 @@ public class Complicated extends AppCompatActivity {
 
     }
 
-    public void checkboxClicked(View v){
+    public void checkboxClicked(View v) {
 
         boolean checked = ((CheckBox) v).isChecked();
 
-        switch(v.getId()){
+        switch (v.getId()) {
             case R.id.complicatedBlue:
                 blue = checked;
                 break;

@@ -14,6 +14,7 @@ import finalproject.bombdefuser.Modules.Memory;
 import finalproject.bombdefuser.Modules.MorseCode;
 import finalproject.bombdefuser.Modules.Needy.NeedyMain;
 import finalproject.bombdefuser.Modules.Passwords;
+import finalproject.bombdefuser.Modules.Sequence;
 import finalproject.bombdefuser.Modules.SimonSays;
 import finalproject.bombdefuser.Modules.SimpleWires;
 import finalproject.bombdefuser.Modules.WhosOnFirst;
@@ -79,7 +80,7 @@ public class ModuleSelection extends AppCompatActivity {
     }
 
     public void wireSeq(View v){
-        Intent intent = new Intent(this, WireSeq.class);
+        Intent intent = new Intent(this, Sequence.class);
         startActivity(intent);
     }
 
