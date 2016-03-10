@@ -7,6 +7,7 @@ import android.content.Intent;
 
 import finalproject.bombdefuser.Modules.ButtonMod;
 import finalproject.bombdefuser.Modules.CompWires;
+import finalproject.bombdefuser.Modules.Complicated;
 import finalproject.bombdefuser.Modules.Keypad;
 import finalproject.bombdefuser.Modules.Mazes;
 import finalproject.bombdefuser.Modules.Memory;
@@ -24,6 +25,7 @@ public class ModuleSelection extends AppCompatActivity {
     public static int num_batteries;
     public static int CAR;
     public static int FRK;
+    public static int parallel_port;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class ModuleSelection extends AppCompatActivity {
         num_batteries = -1;
         CAR = -1;
         FRK = -1;
+        parallel_port = -1;
     }
 
     public void simpleWires(View v){
@@ -71,7 +74,7 @@ public class ModuleSelection extends AppCompatActivity {
         startActivity(intent);
     }
     public void compWires(View v){
-        Intent intent = new Intent(this, CompWires.class);
+        Intent intent = new Intent(this, Complicated.class);
         startActivity(intent);
     }
 

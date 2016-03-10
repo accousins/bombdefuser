@@ -24,7 +24,7 @@
         <activity
             android:name=".Modules.WhosOnFirst"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".Modules.MorseCode"></activity>
+        <activity android:name=".Modules.MorseCode" />
         <activity android:name=".Modules.CompWires" />
         <activity android:name=".Modules.WireSeq" />
         <activity android:name=".Modules.Mazes" />
@@ -32,7 +32,8 @@
         <activity android:name=".Modules.Needy.NeedyMain" />
         <activity android:name=".Modules.Needy.Knob" />
         <activity android:name=".Modules.Needy.Venting" />
-        <activity android:name=".Modules.Needy.Cap"></activity>
+        <activity android:name=".Modules.Needy.Cap" />
+        <activity android:name=".Modules.Complicated"></activity>
     </application>
 
 </manifest>
