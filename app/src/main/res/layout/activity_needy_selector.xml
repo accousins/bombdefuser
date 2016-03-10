@@ -12,29 +12,64 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Venting"
-        android:id="@+id/button4"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="venting" />
+        android:text="Restart Module"
+        android:onClick="restartClick"
+        android:id="@+id/buttonrestart"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Capacitor Discharge"
-        android:id="@+id/button5"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="cap" />
+        android:text="Different Module"
+        android:onClick="differentClick"
+        android:id="@+id/buttondifferent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*Answer the questions.* \nYES to vent gas, NO explode bomb"
+        android:id="@+id/textView17"
+        android:textAlignment="center"
+        android:layout_above="@+id/imageView2"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:background="@drawable/vent"
+        android:layout_above="@+id/button6"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*Hold the lever down to prevent an overload!*"
+        android:id="@+id/textView16"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:background="@drawable/cap"
+        android:layout_below="@+id/textView16"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Knob"
         android:id="@+id/button6"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/button4"
-        android:layout_alignStart="@+id/button4"
-        android:onClick="knob" />
+        android:onClick="knob"
+        android:layout_above="@+id/buttonrestart"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
