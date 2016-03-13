@@ -13,6 +13,7 @@ import finalproject.bombdefuser.Modules.Mazes;
 import finalproject.bombdefuser.Modules.Memory;
 import finalproject.bombdefuser.Modules.MorseCode;
 import finalproject.bombdefuser.Modules.Needy.NeedyMain;
+import finalproject.bombdefuser.Modules.Password;
 import finalproject.bombdefuser.Modules.Passwords;
 import finalproject.bombdefuser.Modules.Sequence;
 import finalproject.bombdefuser.Modules.SimonSays;
@@ -90,13 +91,17 @@ public class ModuleSelection extends AppCompatActivity {
     }
 
     public void passwords(View v){
-        Intent intent = new Intent(this, Passwords.class);
+        Intent intent = new Intent(this, Password.class);
         startActivity(intent);
     }
 
     public void needy(View v){
         Intent intent = new Intent(this, NeedyMain.class);
         startActivity(intent);
+    }
+
+    public void resetBomb(View v){
+        finish();
     }
 
 }

@@ -34,7 +34,8 @@
         <activity android:name=".Modules.Needy.Venting" />
         <activity android:name=".Modules.Needy.Cap" />
         <activity android:name=".Modules.Complicated" />
-        <activity android:name=".Modules.Sequence"></activity>
+        <activity android:name=".Modules.Sequence" />
+        <activity android:name=".Modules.Password"></activity>
     </application>
 
 </manifest>
