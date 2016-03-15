@@ -27,8 +27,6 @@ public class Keypad extends AppCompatActivity {
     String icons[];
     int i;
 
-    String clickedKeys;
-
     String[] sol1 = {"mirror", "keyat", "lambda", "bolt", "squid", "keyh", "backc"};
     String[] sol2 = {"backe", "mirror", "backc", "walt", "emptystar", "keyh", "questmark"};
     String[] sol3 = {"copyright", "controller", "walt", "kk", "cane", "lambda", "emptystar"};
@@ -51,8 +49,6 @@ public class Keypad extends AppCompatActivity {
         icons = new String[4];
         i = 0;
 
-        clickedKeys = "";
-
         linearLayout = (LinearLayout) findViewById(R.id.solution);
         //linearLayout.setVisibility(View.INVISIBLE);
         prompt = (TextView) findViewById(R.id.keypadprompt);
@@ -70,7 +66,11 @@ public class Keypad extends AppCompatActivity {
     }
 
     public void iconClicked(String icon) {
+        if(i >= icons.length){
+            i = 0;
+        }
         icons[i] = icon;
+        i++;
         if (icons.length > 3) {
             giveInstructions();
         }
@@ -111,24 +111,6 @@ public class Keypad extends AppCompatActivity {
     public void keyClick(View v){
         String tag = v.getTag().toString();
         prompt.setText("Click the buttons you see:");
-
-        if(clickedKeys.contains(tag)){
-            //remove it
-            clickedKeys = clickedKeys.substring(0, clickedKeys.indexOf(tag)) +
-                    clickedKeys.substring(clickedKeys.indexOf(tag) + tag.length(), clickedKeys.length());
-            v.getBackground().clearColorFilter();
-            i--;
-            return;
-        }
-
-        if(i > 3){
-            prompt.setText("Please unselect an icon first:");
-            return;
-        }
-
-        clickedKeys += tag;
-        i++;
-        v.getBackground().setColorFilter(Color.argb(155, 100, 100, 100), PorterDuff.Mode.SRC_ATOP);
 
         iconClicked(tag);
     }
