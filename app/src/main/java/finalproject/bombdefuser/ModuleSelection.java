@@ -6,17 +6,17 @@ import android.view.View;
 import android.content.Intent;
 
 import finalproject.bombdefuser.Modules.ButtonMod;
-import finalproject.bombdefuser.Modules.CompWires;
+import finalproject.bombdefuser.Modules.Complicated;
 import finalproject.bombdefuser.Modules.Keypad;
 import finalproject.bombdefuser.Modules.Mazes;
 import finalproject.bombdefuser.Modules.Memory;
 import finalproject.bombdefuser.Modules.MorseCode;
 import finalproject.bombdefuser.Modules.Needy.NeedyMain;
-import finalproject.bombdefuser.Modules.Passwords;
+import finalproject.bombdefuser.Modules.Password;
+import finalproject.bombdefuser.Modules.Sequence;
 import finalproject.bombdefuser.Modules.SimonSays;
 import finalproject.bombdefuser.Modules.SimpleWires;
 import finalproject.bombdefuser.Modules.WhosOnFirst;
-import finalproject.bombdefuser.Modules.WireSeq;
 
 public class ModuleSelection extends AppCompatActivity {
     public static int serial_number_odd;
@@ -24,6 +24,7 @@ public class ModuleSelection extends AppCompatActivity {
     public static int num_batteries;
     public static int CAR;
     public static int FRK;
+    public static int parallel_port;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,7 @@ public class ModuleSelection extends AppCompatActivity {
         num_batteries = -1;
         CAR = -1;
         FRK = -1;
+        parallel_port = -1;
     }
 
     public void simpleWires(View v){
@@ -71,12 +73,12 @@ public class ModuleSelection extends AppCompatActivity {
         startActivity(intent);
     }
     public void compWires(View v){
-        Intent intent = new Intent(this, CompWires.class);
+        Intent intent = new Intent(this, Complicated.class);
         startActivity(intent);
     }
 
     public void wireSeq(View v){
-        Intent intent = new Intent(this, WireSeq.class);
+        Intent intent = new Intent(this, Sequence.class);
         startActivity(intent);
     }
 
@@ -86,13 +88,17 @@ public class ModuleSelection extends AppCompatActivity {
     }
 
     public void passwords(View v){
-        Intent intent = new Intent(this, Passwords.class);
+        Intent intent = new Intent(this, Password.class);
         startActivity(intent);
     }
 
     public void needy(View v){
         Intent intent = new Intent(this, NeedyMain.class);
         startActivity(intent);
+    }
+
+    public void resetBomb(View v){
+        finish();
     }
 
 }

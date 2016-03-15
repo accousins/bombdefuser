@@ -9,30 +9,48 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ModuleSelection" />
-        <activity android:name=".Modules.SimpleWires" />
-        <activity android:name=".Modules.ButtonMod" />
-        <activity android:name=".Modules.Memory" />
-        <activity android:name=".Modules.Keypad" />
-        <activity android:name=".Modules.SimonSays" />
+        <activity android:name=".ModuleSelection"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Modules.SimpleWires"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Modules.ButtonMod"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Modules.Memory"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Modules.Keypad"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Modules.SimonSays"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Modules.WhosOnFirst"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".Modules.MorseCode"></activity>
-        <activity android:name=".Modules.CompWires" />
-        <activity android:name=".Modules.WireSeq" />
-        <activity android:name=".Modules.Mazes" />
-        <activity android:name=".Modules.Passwords" />
-        <activity android:name=".Modules.Needy.NeedyMain" />
-        <activity android:name=".Modules.Needy.Knob" />
-        <activity android:name=".Modules.Needy.Venting" />
-        <activity android:name=".Modules.Needy.Cap"></activity>
+        <activity android:name=".Modules.MorseCode"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Modules.Mazes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Modules.Needy.NeedyMain"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Modules.Needy.Knob"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Modules.Needy.Venting"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Modules.Needy.Cap"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Modules.Complicated"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Modules.Sequence"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Modules.Password">
+            android:screenOrientation="portrait"
+        </activity>
     </application>
 
 </manifest>

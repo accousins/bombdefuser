@@ -19,6 +19,22 @@ public class Knob extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_knob);
+
+        knobPos = (TextView) findViewById(R.id.knobPos);
+
+        led_1 = (CheckBox) findViewById(R.id.led_1);
+        led_2 = (CheckBox) findViewById(R.id.led_2);
+        led_3 = (CheckBox) findViewById(R.id.led_3);
+        led_4 = (CheckBox) findViewById(R.id.led_4);
+        led_5 = (CheckBox) findViewById(R.id.led_5);
+        led_6 = (CheckBox) findViewById(R.id.led_6);
+        led_7 = (CheckBox) findViewById(R.id.led_7);
+        led_8 = (CheckBox) findViewById(R.id.led_8);
+        led_9 = (CheckBox) findViewById(R.id.led_9);
+        led_10 = (CheckBox) findViewById(R.id.led_10);
+        led_11 = (CheckBox) findViewById(R.id.led_11);
+        led_12 = (CheckBox) findViewById(R.id.led_12);
+
     }
 
     public void getPos(View v) {

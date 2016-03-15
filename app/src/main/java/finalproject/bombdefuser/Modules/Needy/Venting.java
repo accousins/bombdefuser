@@ -19,7 +19,7 @@ public class Venting extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_venting);
 
-        vent.setImageResource(R.drawable.vent);
+        //vent.setImageResource(R.drawable.vent);
         vent.setVisibility(View.VISIBLE);
     }
 

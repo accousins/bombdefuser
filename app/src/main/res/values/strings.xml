@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bomb Defuser</string>
+    <string name="app_name">Keep Tapping and Nobody Explodes</string>
     <string name="waiting">Waiting for Input...</string>
     <string name="compWires_toCut"></string>
     <string name="wireSeq_redToCut"></string>

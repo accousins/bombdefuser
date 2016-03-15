@@ -9,11 +9,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="finalproject.bombdefuser.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Title Screen!" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,4 +17,12 @@
         android:id="@+id/button"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ktanelogo" />
 </RelativeLayout>

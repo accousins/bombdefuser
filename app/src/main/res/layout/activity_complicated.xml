@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="finalproject.bombdefuser.Modules.Complicated">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restart Module"
+        android:onClick="restartClick"
+        android:id="@+id/buttonrestart"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Different Module"
+        android:onClick="differentClick"
+        android:id="@+id/buttondifferent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Does the Wire have..."
+        android:id="@+id/textView18"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blue?"
+        android:id="@+id/complicatedBlue"
+        android:onClick="checkboxClicked"
+        android:layout_below="@+id/textView18"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Red?"
+        android:id="@+id/complicatedRed"
+        android:onClick="checkboxClicked"
+        android:layout_below="@+id/complicatedBlue"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A Star?"
+        android:id="@+id/complicatedStar"
+        android:onClick="checkboxClicked"
+        android:layout_below="@+id/complicatedRed"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A Lit LED?"
+        android:id="@+id/complicatedLed"
+        android:onClick="checkboxClicked"
+        android:layout_below="@+id/complicatedStar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check Wire!"
+        android:id="@+id/complicatedCheck"
+        android:onClick="checkWire"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Waiting for Input..."
+        android:id="@+id/complicatedInstruct"
+        android:layout_below="@+id/complicatedCheck"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/complicatedCheck"
+        android:layout_toEndOf="@+id/complicatedLed"
+        android:id="@+id/complicatedExtraQuestion"
+        android:layout_below="@+id/textView18"
+        android:layout_toRightOf="@+id/complicatedLed">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/complicatedExtraQText"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:id="@+id/complicatedYes"
+            android:onClick="buttonClick"
+            android:layout_below="@+id/complicatedExtraQText"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:id="@+id/complicatedNo"
+            android:onClick="buttonClick"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/complicatedYes"
+            android:layout_alignStart="@+id/complicatedYes" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:id="@+id/complicatedBatt1"
+            android:onClick="buttonClick"
+            android:layout_alignTop="@+id/complicatedYes"
+            android:layout_toRightOf="@+id/complicatedYes"
+            android:layout_toEndOf="@+id/complicatedYes" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3+"
+            android:id="@+id/complicatedBatt3"
+            android:onClick="buttonClick"
+            android:layout_alignTop="@+id/complicatedNo"
+            android:layout_toRightOf="@+id/complicatedNo"
+            android:layout_toEndOf="@+id/complicatedNo" />
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
